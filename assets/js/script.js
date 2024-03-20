@@ -1,9 +1,27 @@
-// Get a reference to the #add-employees-btn element
-const addEmployeesBtn = document.querySelector('#add-employees-btn');
+// reference the #add-employees-btn element
+const addEmployeesBtn = document.getElementById('add-employee-btn');
 
 // Collect employee data
 const collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objects
+
+  let employees = [];
+  let addMore = true;
+
+  while (addMore) {
+    let firstName = prompt ("Enter employee's first name:");
+    let lastName = prompt ("Enter employee's last name:");
+    let salaryInput = prompt ("Enter employee's salary:");
+    let salary = isNaN(parseInt(salaryInput)) ? 0: parseInt(salaryInput);
+    
+    employees.push({
+      firstName: firstName,
+      lastName: lastName,
+      salary: salary
+    });
+    let continueInput = prompt("Do you want to add another employee? (Yes/No)");
+    addMore = continueInput.toLocaleLowerCase() === "Yes";
+  }
+  return employees;
 }
 
 // Display the average salary
