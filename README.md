@@ -1,5 +1,5 @@
-**                                                              Employee Payroll Tracker
-**
+**Employee Payroll Tracker
+
 **Description**
 
 This application is an employee payroll tracker that allows a payroll manager to manage and view employee payroll data. The user can add employees by entering their first name, last name, and salary. The application provides prompts for adding new employees, continuing to add more employees, or canceling the process. The employee data is displayed on the page sorted alphabetically by last name, and the console shows computed and aggregated data.
